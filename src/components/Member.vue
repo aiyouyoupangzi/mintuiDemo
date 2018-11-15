@@ -1,6 +1,6 @@
 <template>
     <div>
-        会员
+        <h1>会员</h1>
     </div>
 </template>
 
@@ -9,9 +9,12 @@ export default {
     name:'menber',
     data(){
         return {
-            
         }
     }
 }
 </script>
+
+<style scoped>
+</style>
+
 
