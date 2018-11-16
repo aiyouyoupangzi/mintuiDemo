@@ -39,7 +39,12 @@ export default new Router({
       path:'/home/newscontent/:index',
       name:'新闻详情',
       component:() => System.import('@/components/home/NewsContent.vue')
-    }
+    },
+    {
+      path:'/home/photo',
+      name:"图片分享",
+      component:() => System.import('@/components/home/Photo.vue')
+    },
   ],
   linkActiveClass:'mui-active',
   mode:'history'

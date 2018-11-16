@@ -1,17 +1,19 @@
 <template>
     <div class="content">
-        <h1 class="title">{{newsContent.title}}</h1>
+        <h1 class="title">{{newsContent.title}}{{id}}</h1>
         <p class="subtitle">
             <span>发表时间{{newsContent.addTime}}</span>
             <span>点击：{{newsContent.click}}次</span>
         </p>
         <hr>
         <div class="cont" v-html="newsContent.content"></div>
-        
+        <hr>
+        <comment-box :id="id"></comment-box>
     </div>
 </template>
 
 <script>
+import comment from '../subComponents/comment.vue'
 export default {
     data(){
         return {
@@ -40,6 +42,9 @@ export default {
                 });
             });
         }
+    },
+    components:{
+        'comment-box':comment
     }
 }
 </script>
@@ -50,7 +55,7 @@ export default {
 }
 
 .title {
-    font-size: 14px;
+    /* font-size: 14px; */
     color: red;
 }
 

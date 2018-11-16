@@ -17,10 +17,10 @@
                 <!-- <span class="mui-icon mui-icon-home"></span> -->
                 <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3075732339,3453051378&fm=27&gp=0.jpg">
                 <div class="mui-media-body">新闻资讯</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photo">
                 <!-- <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span> -->
                 <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=475755311,2938171268&fm=200&gp=0.jpg">
-                <div class="mui-media-body">图片分享</div></a></li>
+                <div class="mui-media-body">图片分享</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <!-- <span class="mui-icon mui-icon-chatbubble"></span> -->
                 <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=367729051,292823901&fm=200&gp=0.jpg">
