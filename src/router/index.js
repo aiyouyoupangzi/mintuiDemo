@@ -30,6 +30,16 @@ export default new Router({
       name: "搜索",
       component: () => System.import("@/components/Search.vue")
     },
+    {
+      path:'/home/news',
+      name:"新闻资讯",
+      component:() => System.import('@/components/home/News.vue')
+    },
+    {
+      path:'/home/newscontent/:index',
+      name:'新闻详情',
+      component:() => System.import('@/components/home/NewsContent.vue')
+    }
   ],
   linkActiveClass:'mui-active',
   mode:'history'

@@ -8,8 +8,10 @@ import 'mint-ui/lib/style.css'
 import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
+import axios from 'axios'
 
 Vue.use(Mint);
+Vue.prototype.axios = axios;
 
 Vue.config.productionTip = false
 
