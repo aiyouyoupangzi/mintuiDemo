@@ -12,6 +12,7 @@
 2.首页：轮播图、九宫格
 3.图片分享：横向scroll
 >总结一下
+
  3.1需要借助于MUI中的tab-top-webview-main.html
  3.2需要把slider区域的mui-fullscreen类去掉，不然滚动条会显示在整个页面
  3.3滑动条无法正常触发滑动，发现这个是js组件，需要被初始化一下

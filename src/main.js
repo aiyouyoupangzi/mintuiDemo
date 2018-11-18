@@ -9,9 +9,11 @@ import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
 import axios from 'axios'
+import VuePreview from 'vue2-preview'
 
 Vue.use(Mint);
 Vue.prototype.axios = axios;
+Vue.use(VuePreview);
 
 Vue.config.productionTip = false
 

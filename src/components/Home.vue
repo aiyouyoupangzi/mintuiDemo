@@ -21,10 +21,10 @@
                 <!-- <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span> -->
                 <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=475755311,2938171268&fm=200&gp=0.jpg">
                 <div class="mui-media-body">图片分享</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/goodlist">
                 <!-- <span class="mui-icon mui-icon-chatbubble"></span> -->
                 <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=367729051,292823901&fm=200&gp=0.jpg">
-                <div class="mui-media-body">商品购买</div></a></li>
+                <div class="mui-media-body">商品购买</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <!-- <span class="mui-icon mui-icon-location"></span> -->
                 <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3733066480,2410150941&fm=26&gp=0.jpg">

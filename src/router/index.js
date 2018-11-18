@@ -45,6 +45,16 @@ export default new Router({
       name:"图片分享",
       component:() => System.import('@/components/home/Photo.vue')
     },
+    {
+      path:'/home/photoInfo/:id',
+      name:"图片详情",
+      component:() => System.import('@/components/subComponents/photoInfo.vue')
+    },
+    {
+      path:'/home/goodlist',
+      name:"商品购买",
+      component:() => System.import('@/components/home/GoodList.vue')
+    },
   ],
   linkActiveClass:'mui-active',
   mode:'history'
