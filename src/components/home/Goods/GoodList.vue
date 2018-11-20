@@ -1,6 +1,6 @@
 <template>
     <div class="good-list">
-        <div class="good-item" v-for="(item,index) in goodList" :key="index">
+        <div class="good-item" v-for="(item,index) in goodList" :key="index" @click="getGoodInfo(item.id)">
             <img :src='item.src'>
             <h1>{{item.title}}</h1>
             <div class="info">
@@ -27,59 +27,95 @@ export default {
                 title:'上汽大通D90上汽大通D90上汽大通D90上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:33
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:22
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:11
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:44
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:55
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:66
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:77
             },
             {
                 src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
-                num:3
+                num:3,
+                id:88
             }
-        ]
+        ],
     };
+  },
+  created(){
+    //   this.getGoodList();
+  },
+  methods:{
+      getGoodList(){
+          this.axios({
+              methods:'GET',
+              url:'',
+          }).then((result) => {
+              
+          }).catch((err) => {
+              
+          });
+      },
+      getGoodInfo(id){
+        //  1 最简单的编程式导航
+          this.$router.push('/home/goodlist/'+id);
+        //  2 在路由中拼接参数传递参数
+        //   this.$router.push({path:'/home/goodlist/'+id});
+        //  3 通过name属性进行路由跳转
+        //   this.$router.push({name:'货物详情',params:{id:id}});
+        // 注意：如果使用了path，那么params会被忽略，也就是说在使用oath进行路由跳转时不能用params进行传参
+
+        // 所以就有了第四种路由跳转的方式，不过这种方式进行跳转后参数是以？跟随在路由后面的
+        //  4 这个例子的路由是/home/goodlist/?id=22
+        //   this.$router.push({path:'/home/goodlist/',query:{id:id}});
+      }
   }
 };
 </script>

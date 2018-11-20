@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <mt-header fixed title="斌斌的移动端DEMO"></mt-header>
+    <mt-header fixed title="斌斌的移动端DEMO">
+      <mt-button icon="back" slot="left" @click="goBack">返回</mt-button>
+    </mt-header>
     <transition>
       <router-view></router-view>
     </transition>
@@ -14,7 +16,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-lib" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge">0</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-lib" to="/search">
@@ -27,11 +29,16 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    goBack(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

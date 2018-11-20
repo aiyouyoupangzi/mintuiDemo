@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import comment from "../subComponents/comment.vue";
+import comment from "../../subComponents/comment.vue";
 export default {
   data() {
     return {

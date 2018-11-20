@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import mui from "../../lib/mui/js/mui.min.js";
+import mui from "../../../lib/mui/js/mui.min.js";
 
 export default {
   name: "photo",
@@ -76,40 +76,46 @@ export default {
       phoList: [
         {
           id: 1,
-		  imgUrl: "http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg",
-		  title:'这是一辆车',
-		  abstract:'我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车'
-		},
-		{
+          imgUrl:
+            "http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg",
+          title: "这是一辆车",
+          abstract:
+            "我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车我是一辆车车车车车车车车，车车车车车车车车车"
+        },
+        {
           id: 2,
-          imgUrl: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1390296521,3529140802&fm=26&gp=0.jpg",
-		  title:'这是一辆车',
-		  abstract:'我是一辆车车车车车车车车，车车车车车车车车车'
-		},
-		{
+          imgUrl:
+            "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1390296521,3529140802&fm=26&gp=0.jpg",
+          title: "这是一辆车",
+          abstract: "我是一辆车车车车车车车车，车车车车车车车车车"
+        },
+        {
           id: 3,
-		  imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2600396752,2098756689&fm=26&gp=0.jpg",
-		  title:'这是一辆车',
-		  abstract:'我是一辆车车车车车车车车，车车车车车车车车车'
-		},
-		{
+          imgUrl:
+            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2600396752,2098756689&fm=26&gp=0.jpg",
+          title: "这是一辆车",
+          abstract: "我是一辆车车车车车车车车，车车车车车车车车车"
+        },
+        {
           id: 4,
-		  imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2346538073,473993662&fm=26&gp=0.jpg",
-		  title:'这是一辆车',
-		  abstract:'我是一辆车车车车车车车车，车车车车车车车车车'
-		},
-		{
+          imgUrl:
+            "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2346538073,473993662&fm=26&gp=0.jpg",
+          title: "这是一辆车",
+          abstract: "我是一辆车车车车车车车车，车车车车车车车车车"
+        },
+        {
           id: 5,
-		  imgUrl: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=762087652,3506417955&fm=26&gp=0.jpg",
-		  title:'这是一辆车',
-		  abstract:'我是一辆车车车车车车车车，车车车车车车车车车'
+          imgUrl:
+            "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=762087652,3506417955&fm=26&gp=0.jpg",
+          title: "这是一辆车",
+          abstract: "我是一辆车车车车车车车车，车车车车车车车车车"
         }
       ]
     };
   },
   created() {
-	//   this.getTitleList();
-	// this.getPhotoList(0);
+    //   this.getTitleList();
+    // this.getPhotoList(0);
   },
   methods: {
     getTitleList() {
@@ -123,7 +129,7 @@ export default {
     getPhotoList(carId) {
       this.axios({
         methods: "GET",
-        url: "?carId=	"+carId
+        url: "?carId=	" + carId
       })
         .then(result => {})
         .catch(err => {});
@@ -143,27 +149,28 @@ export default {
 }
 
 .phopoul {
-	padding: 10px;
-	padding-bottom: 0;
+  padding: 10px;
+  padding-bottom: 0;
 }
 
-.phopoul li{
-	background-color: #cccccc;
-	text-align: center;
-	margin-bottom: 10px;
-	box-shadow: 0 0 8px #999;
-	position: relative;
+.phopoul li {
+  background-color: #cccccc;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px #999;
+  position: relative;
 }
 
 .phopoul img {
-	width: 100%;
-	vertical-align: middle
+  width: 100%;
+  vertical-align: middle;
 }
 
-ul,li {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 img[lazy="loading"] {
@@ -173,21 +180,21 @@ img[lazy="loading"] {
 }
 
 .info {
-	color: white;
-	text-align: left;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	max-height: 84px;
-	background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 84px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .info-title {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .info-body {
-	font-size: 13px;
+  font-size: 13px;
 }
 </style>
 

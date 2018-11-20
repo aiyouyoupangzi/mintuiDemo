@@ -1,15 +1,7 @@
 <template>
     <div>
         <!-- 轮播图 -->
-        <mt-swipe :auto="4000" class="swipe">
-            <!-- 在组件中使用v-for循环的话一定要绑定key -->
-            <mt-swipe-item v-for="item in lunBoList" :key="item.index">
-                <div>
-                    <!-- 想要加载本地图片，就把图片放到static文件夹中 -->
-                    <img :src="item.imgUrl">
-                </div>
-            </mt-swipe-item>
-        </mt-swipe>
+        <my-swipe :lunBoList='lunBoList'></my-swipe>
 
         <!-- 六宫格 -->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -42,7 +34,8 @@
 </template>
 
 <script>
-import { Toast } from 'mint-ui';
+import { Toast } from "mint-ui";
+import myswipe from "./subComponents/myswipe.vue";
 export default {
   name: "home",
   data() {
@@ -51,17 +44,20 @@ export default {
         {
           index: 0,
           url: "",
-          imgUrl: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2066055929,4051898253&fm=26&gp=0.jpg"
+          imgUrl:
+            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2066055929,4051898253&fm=26&gp=0.jpg"
         },
         {
           index: 1,
           url: "",
-          imgUrl: "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2900506088,3526378296&fm=26&gp=0.jpg"
+          imgUrl:
+            "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2900506088,3526378296&fm=26&gp=0.jpg"
         },
         {
           index: 2,
           url: "",
-          imgUrl: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=972780423,3057208343&fm=26&gp=0.jpg"
+          imgUrl:
+            "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=972780423,3057208343&fm=26&gp=0.jpg"
         }
       ]
     };
@@ -71,20 +67,21 @@ export default {
   },
   methods: {
     getLunBo() {
-        // 这个地方用的是vue-resource请求，由于Vue2.0之后就不再对其进行更新了，其他页面中的请求我们都是使用了axios
+      // 这个地方用的是vue-resource请求，由于Vue2.0之后就不再对其进行更新了，其他页面中的请求我们都是使用了axios
       this.$http.get("").then(res => {
         if (res.body.status === 0) {
           this.lunBoList = res.body.data;
         } else {
           Toast({
-              message:'加载轮播图失败',
-              position:'bottom',
-              duration:2000
+            message: "加载轮播图失败",
+            position: "bottom",
+            duration: 2000
           });
         }
       });
     }
-  }
+  },
+  components: { "my-swipe": myswipe }
 };
 </script>
 
@@ -104,20 +101,20 @@ export default {
 }
 
 .mui-table-view.mui-grid-view.mui-grid-9 {
-    background-color: #fff;
+  background-color: #fff;
 }
 .mui-table-view-cell.mui-media.mui-col-xs-4.mui-col-sm-3 {
-    border: none;
+  border: none;
 }
 
 ul li img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .mui-table-view-cell.mui-media.mui-col-xs-4.mui-col-sm-3 .mui-media-body {
-    font-size: 13px;
+  font-size: 13px;
 }
 </style>
 

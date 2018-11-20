@@ -33,27 +33,42 @@ export default new Router({
     {
       path:'/home/news',
       name:"新闻资讯",
-      component:() => System.import('@/components/home/News.vue')
+      component:() => System.import('@/components/home/News/News.vue')
     },
     {
       path:'/home/newscontent/:index',
       name:'新闻详情',
-      component:() => System.import('@/components/home/NewsContent.vue')
+      component:() => System.import('@/components/home/News/NewsContent.vue')
     },
     {
       path:'/home/photo',
       name:"图片分享",
-      component:() => System.import('@/components/home/Photo.vue')
+      component:() => System.import('@/components/home/Photo/Photo.vue')
     },
     {
       path:'/home/photoInfo/:id',
       name:"图片详情",
-      component:() => System.import('@/components/subComponents/photoInfo.vue')
+      component:() => System.import('@/components/home/Photo/photoInfo.vue')
     },
     {
       path:'/home/goodlist',
       name:"商品购买",
-      component:() => System.import('@/components/home/GoodList.vue')
+      component:() => System.import('@/components/home/Goods/GoodList.vue')
+    },
+    {
+      path:'/home/goodlist/:id',
+      name:"货物详情",
+      component:() => System.import('@/components/home/Goods/goodsInfo.vue')
+    },
+    {
+      path:'/home/goodsDesc/:id',
+      name:"图文介绍",
+      component:() => System.import('@/components/home/Goods/goodsDesc.vue')
+    },
+    {
+      path:'/home/goodsCmt/:id',
+      name:"商品评论",
+      component:() => System.import('@/components/home/Goods/goodsCmt.vue')
     },
   ],
   linkActiveClass:'mui-active',
