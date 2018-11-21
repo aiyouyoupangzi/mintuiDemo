@@ -31,7 +31,7 @@ export default {
                 id:33
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
+                src:'http://img5.imgtn.bdimg.com/it/u=243510494,944591097&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
@@ -39,7 +39,7 @@ export default {
                 id:22
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
+                src:'http://img3.imgtn.bdimg.com/it/u=196456448,2663942209&fm=11&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
@@ -47,7 +47,7 @@ export default {
                 id:11
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
+                src:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=972780423,3057208343&fm=26&gp=0.jpg',
                 title:'上汽大通D90',
                 newPrice:'1000000',
                 olePrice:'2000000',
@@ -55,32 +55,32 @@ export default {
                 id:44
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
-                title:'上汽大通D90',
+                src:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2066055929,4051898253&fm=26&gp=0.jpg',
+                title:'上汽大通V80',
                 newPrice:'1000000',
                 olePrice:'2000000',
                 num:3,
                 id:55
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
-                title:'上汽大通D90',
+                src:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2900506088,3526378296&fm=26&gp=0.jpg',
+                title:'上汽大通T60',
                 newPrice:'1000000',
                 olePrice:'2000000',
                 num:3,
                 id:66
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
-                title:'上汽大通D90',
+                src:'http://img2.imgtn.bdimg.com/it/u=3062784692,4293789298&fm=26&gp=0.jpg',
+                title:'上汽大通G10',
                 newPrice:'1000000',
                 olePrice:'2000000',
                 num:3,
                 id:77
             },
             {
-                src:'http://img0.imgtn.bdimg.com/it/u=2136915607,2668879035&fm=26&gp=0.jpg',
-                title:'上汽大通D90',
+                src:'http://img0.imgtn.bdimg.com/it/u=1362979111,1980793229&fm=26&gp=0.jpg',
+                title:'上汽大通G50',
                 newPrice:'1000000',
                 olePrice:'2000000',
                 num:3,

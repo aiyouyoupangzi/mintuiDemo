@@ -85,7 +85,7 @@ export default {
         add_time: "2018-11-19 11:11"
       },
       ballFlag: false,
-      num:0
+      num: 1
     };
   },
   components: {
@@ -100,13 +100,23 @@ export default {
       this.$router.push("/home/goodsCmt/" + id);
     },
 
-    getNum(num){
-        this.num = num;
+    getNum(num) {
+      this.num = num;
     },
 
     addCar() {
       this.ballFlag = !this.ballFlag;
-         console.log(this.num)
+      //  我一开始想到改变数据的方式就是这样，但是不推荐这么修改数据
+      // this.$store.state.count = this.num;
+
+      const goods = {
+        id: this.id,
+        count: parseInt(this.num),
+        price: this.goodsInfo.marketingPrice,
+        selected: true
+      };
+
+      this.$store.commit('addToCar',goods);
     },
 
     beforeEnter(el) {
