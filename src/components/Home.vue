@@ -78,7 +78,9 @@ export default {
             duration: 2000
           });
         }
-      });
+      }).catch((err) => {
+              new Function();
+          });
     }
   },
   components: { "my-swipe": myswipe }

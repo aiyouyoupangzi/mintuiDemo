@@ -68,7 +68,7 @@ export default {
             .then((result) => {
                 
             }).catch((err) => {
-                
+                new Function();
             });
         },
         addCmt:_debounce(function(){
@@ -89,7 +89,7 @@ export default {
             }).then((result) => {
                 
             }).catch((err) => {
-                
+                new Function();
             });
         }
     }

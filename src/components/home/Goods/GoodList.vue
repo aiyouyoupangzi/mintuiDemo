@@ -100,7 +100,7 @@ export default {
           }).then((result) => {
               
           }).catch((err) => {
-              
+              new Function();
           });
       },
       getGoodInfo(id){

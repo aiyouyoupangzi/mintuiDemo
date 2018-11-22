@@ -124,7 +124,9 @@ export default {
         url: ""
       })
         .then(result => {})
-        .catch(err => {});
+        .catch(err => {
+          new Function();
+        });
     },
     getPhotoList(carId) {
       this.axios({
@@ -132,7 +134,9 @@ export default {
         url: "?carId=	" + carId
       })
         .then(result => {})
-        .catch(err => {});
+        .catch(err => {
+          new Function();
+        });
     }
   },
   mounted() {
